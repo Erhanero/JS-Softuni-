@@ -1,0 +1,4 @@
+function data([firstname, lastname, age, city]){
+
+console.log(`You are a ${firstname} ${lastname} a ${age} years old person from ${city}`)
+}
