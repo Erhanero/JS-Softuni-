@@ -1,0 +1,8 @@
+1. Sum Digits
+Write a function which will be given a single number. Your task is to find the sum of its digits.
+
+Examples
+Input Output
+245678 32
+97561 28
+543 12
