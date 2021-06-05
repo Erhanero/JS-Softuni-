@@ -1,0 +1,5 @@
+Array Rotation
+Write a function that receives an array and number of rotations you have to perform (first element goes at the
+end).
+Output
+Print the resulting array elements separated my single space.
