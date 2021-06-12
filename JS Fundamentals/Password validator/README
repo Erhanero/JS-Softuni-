@@ -1,0 +1,14 @@
+6. Password Validator
+Write a function that checks if a given password is valid. Password validations are:
+
+© SoftUni – https://softuni.org. Copyrighted document. Unauthorized copy, reproduction or use is not permitted.
+Follow us: Page 1 of 1
+
+ The length should be 6 - 10 characters (inclusive)
+ It should consists only of letters and digits
+ It should have at least 2 digits
+If a password is valid print &quot;Password is valid&quot;.
+If it is NOT valid, for every unfulfilled rule print a message:
+ &quot;Password must be between 6 and 10 characters&quot;
+ &quot;Password must consist only of letters and digits&quot;
+ &quot;Password must have at least 2 digits&quot;
