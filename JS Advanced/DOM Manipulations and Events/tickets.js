@@ -1,5 +1,4 @@
 function solve(arr, sortingCriterion) {
-    let obj = {};
     let tickets = [];
     class Ticket {
         constructor(destination, price, status) {
