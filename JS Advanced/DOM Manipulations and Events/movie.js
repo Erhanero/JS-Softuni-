@@ -2,15 +2,15 @@ class Movie {
     constructor(movieName, ticketPrice) {
         this.movieName = movieName;
         this.ticketPrice = Number(ticketPrice);
-        this._screenings = [];
+        this.screenings = [];
         this.profit = 0;
         this.totalSoldTickets = 0;
     }
 
     newScreening(date, hall, description) {
-        let screen = this._screenings.find(x => x.date === date && x.hall === hall);
+        let screen = this.screenings.find(x => x.date === date && x.hall === hall);
         if (screen === undefined) {
-            this._screenings.push({
+            this.screenings.push({
                 date,
                 hall,
                 description
@@ -24,15 +24,15 @@ class Movie {
     }
     
     endScreening(date, hall, soldTickets) {
-        let screen = this._screenings.find((x => x.date == date && x.hall == hall));
+        let screen = this.screenings.find((x => x.date == date && x.hall == hall));
 
         if (screen == undefined) {
             throw new Error(`Sorry, there is no such screening for ${this.movieName} movie.`)
 
         } else {
-            let index = this._screenings.indexOf(screen);
-            this._screenings.splice(index, 1)
-            // this._screenings = this._screenings.filter(x => x.date != date && x.hall != hall);
+            let index = this.screenings.indexOf(screen);
+            this.screenings.splice(index, 1)
+            // this.screenings = this.screenings.filter(x => x.date != date && x.hall != hall);
             let currentProfit = this.ticketPrice * Number(soldTickets);
             this.profit += currentProfit;
             this.totalSoldTickets += soldTickets;
@@ -49,9 +49,9 @@ class Movie {
         result.push(`Total profit: ${this.profit.toFixed(0)}$`);
         result.push(`Sold Tickets: ${this.totalSoldTickets}`)
 
-        if (this._screenings.length > 0) {
+        if (this.screenings.length > 0) {
             result.push("Remaining film screenings:");
-            this._screenings.sort((a, b) => a.hall.localeCompare(b.hall))
+            this.screenings.sort((a, b) => a.hall.localeCompare(b.hall))
                 .forEach(x => {
                     result.push(`${x.hall} - ${x.date} - ${x.description}`)
                 })
